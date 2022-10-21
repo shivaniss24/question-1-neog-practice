@@ -1,40 +1,35 @@
-var inputOne=document.querySelector('#input-1');
-var inputTwo=document.querySelector('#input-2');
-var btnOne= document.querySelector('#addition');
-var btnTwo=document.querySelector('#substraction');
-var btnThree=document.querySelector('#multiplication');
-var btnFour=document.querySelector('#division');
-var output=   document.querySelector('#output');
+var input1=document.querySelector('#input-one');
+var input2=document.querySelector('#input-two');
+var add=document.querySelector('#add');
+var sub=document.querySelector('#sub');
+var mul=document.querySelector('#mul');
+var div=document.querySelector('#div');
+var output=document.querySelector('#output');
 
-function add()
+function addition()
 {
-    var addition = Number(inputOne.value)+Number(inputTwo.value);
-    output.innerText=addition;
-    // console.log(addition);
+    var sum=parseInt(input1.value)+parseInt(input2.value);
+   output.innerText=sum;
+  // console.log(sum);
 }
-function difference()
+function substraction()
 {
-    var diff=Number(inputOne.value)-Number(inputTwo.value);
-    output.innerText=diff;
-    // console.log(diff);
+  var subs=parseInt(input1.value)-parseInt(input2.value);
+  output.innerText=subs;
 }
-function mul()
+function multiplication()
 {
-var multi=Number(inputOne.value)*Number(inputTwo.value);
-output.innerText=multi;
+ var mul=parseInt(input1.value)*parseInt(input2.value);
+ output.innerText=mul;
 }
-function div()
+function division()
 {
-  var division=Number(inputOne.value)/Number(inputTwo.value);
-  output.innerText=division;
+var divi=parseInt(input1.value)/parseInt(input2.value);
+output.innerText=divi;
 }
-btnOne.addEventListener('click',add);
-btnTwo.addEventListener('click',difference);
-btnThree.addEventListener('click',mul);
-btnFour.addEventListener('click',div);
 
 
-
-
-
-
+add.addEventListener('click',addition);
+sub.addEventListener('click',substraction);
+mul.addEventListener('click',multiplication);
+div.addEventListener('click',division);
